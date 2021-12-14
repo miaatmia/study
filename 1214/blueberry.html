@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find blueberries!</title>
+    <style>
+      .btn {
+        position: fixed;
+        font-size: 30px;
+      }
+
+      .btn:hover {
+        background-color: darkviolet;
+        color: yellow;
+        cursor: pointer;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+        margin: 0 auto;
+      }
+      .strawberry {
+        background: url("strawberry.png");
+        background-size: 100%;
+      }
+
+      .blueberry {
+        background: url("blueberries.png");
+        background-size: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="btn">Find blueberries! 🫐</button>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <!-- blueberry is here -->
+    <div class="blueberry" alt="blueberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+    <div class="strawberry" alt="strawberry"></div>
+
+    <script>
+      "use strict";
+
+      const btn = document.querySelector(".btn");
+      const blueberry = document.querySelector(".blueberry");
+
+      btn.addEventListener("click", () => {
+        blueberry.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    </script>
+  </body>
+</html>

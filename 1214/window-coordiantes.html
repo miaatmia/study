@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window-coordinates</title>
+    <style>
+      div {
+        background-color: darkcyan;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+
+      div.pink {
+        background-color: pink;
+      }
+
+      .buttons {
+        position: fixed;
+        background-color: initial;
+        width: 400px;
+        height: 50px;
+        right: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="buttons">
+      <button class="by100">Scroll by 100px(y)</button>
+      <button class="to100">Scroll to 100px(y)</button>
+      <button class="intoPink">Scroll into Pink</button>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="pink"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+      const pink = document.querySelector(".pink");
+      pink.addEventListener("click", (e) => {
+        const rect = pink.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${e.screenX}, ${e.screenY}`);
+        console.log(`page: ${e.clientX}, ${e.clientY}`);
+      });
+
+      const to100 = document.querySelector(".to100");
+      const by100 = document.querySelector(".by100");
+      const intoPink = document.querySelector(".intoPink");
+
+      // 1. 100px씩 세로 이동 : 괄호안에 object도 ok.
+      by100.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+
+      // 2. 100px 고정 좌표로 이동
+      to100.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+
+      // 3. 특정위치(pink)로 이동
+      intoPink.addEventListener("click", (e) => {
+        // 3-1. offsetTop 사용하는 방법
+        // const pinkTop = pink.offsetTop;
+        // const offHeight = pink.offsetHeight;
+        // window.scrollTo({ top: pinkTop, behavior: "smooth" });
+
+        // 3-2. scrollIntoView 사용하는 방법
+        pink.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>
