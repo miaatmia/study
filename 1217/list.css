@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 196, 0);
+  /* background-color: rgb(44, 51, 155); */
+}
+
+.frame {
+  width: 550px;
+  height: 700px;
+  background-color: black;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.paper {
+  position: relative;
+  width: 480px;
+  height: 600px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: #fff;
+  top: 35px;
+
+  z-index: 10;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+
+header .timestamp {
+  line-height: 26px;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+section {
+  width: 200px;
+  height: 500px;
+  overflow: hidden;
+  /* margin-top: 25px; */
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  padding-left: 2px;
+}
+
+li:hover {
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.container-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  font-style: italic;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.not-read li::before {
+  content: "🔴";
+}
+
+.not-read li:hover::after {
+  display: flex;
+  justify-content: space-between;
+  /* right: 0; */
+  content: " ➡︎";
+}
+
+.read li::before {
+  content: "🔵";
+}
+
+.read li:hover::after {
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  content: " ✖️";
+}
+
+.input-wrap {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 400px;
+  height: 40px;
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+button {
+  padding: 2px 4px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book 📚 List</title>
+    <script src="list.js" defer></script>
+    <link rel="stylesheet" href="list.css" />
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="paper">
+        <header>
+          <span class="timestamp">DATE/TIME</span>
+          <span class="night"></span>
+        </header>
+
+        <div class="container-section">
+          <section class="not-read">
+            <h3>I HAVEN'T READ...</h3>
+            <ul>
+              <li>사피엔스</li>
+            </ul>
+          </section>
+
+          <section class="read">
+            <h3>I HAVE READ...</h3>
+            <ul>
+              <li>나는 소망한다 내게 금지된 것을</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="input-wrap">
+          <input
+            class="input-box"
+            type="text"
+            placeholder="Type a book here!"
+          />
+          <button type="submit" onkeydown="showText(event)">➕</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
